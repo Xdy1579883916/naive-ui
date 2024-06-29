@@ -6,7 +6,7 @@ export { zindexable } from 'vdirs'
 
 export { default as create } from './create'
 
-export * from './locales'
+export { zhCN, dateZhCN, enUS, dateEnUS } from './locales'
 export * from './components'
 export * from './composables'
 

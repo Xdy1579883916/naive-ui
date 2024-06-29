@@ -1,5 +1,5 @@
 import { inject, computed, type Ref } from 'vue'
-import { enUS, dateEnUS } from '../locales'
+import { zhCN, dateZhCN } from '../locales'
 import type { NLocale } from '../locales/common/enUS'
 import type { NDateLocale } from '../locales/date/enUS'
 import { configProviderInjectionKey } from '../config-provider/src/context'
@@ -13,10 +13,10 @@ export default function useLocale<T extends keyof NLocale> (
   const { mergedLocaleRef, mergedDateLocaleRef } =
     inject(configProviderInjectionKey, null) || {}
   const localeRef = computed(() => {
-    return mergedLocaleRef?.value?.[ns] ?? enUS[ns]
+    return mergedLocaleRef?.value?.[ns] ?? zhCN[ns]
   })
   const dateLocaleRef = computed(() => {
-    return mergedDateLocaleRef?.value ?? dateEnUS
+    return mergedDateLocaleRef?.value ?? dateZhCN
   })
   return {
     dateLocaleRef,

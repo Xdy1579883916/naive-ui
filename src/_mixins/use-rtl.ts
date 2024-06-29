@@ -1,10 +1,11 @@
-import { type Ref, onBeforeMount, watchEffect, computed } from 'vue'
+import { computed, inject, onBeforeMount, type Ref, watchEffect } from 'vue'
 import { exists } from 'css-render'
 import { useSsrAdapter } from '@css-render/vue3-ssr'
 import type {
   RtlEnabledState,
   RtlItem
 } from '../config-provider/src/internal-interface'
+import { configProviderInjectionKey } from '../config-provider/src/context'
 import { cssrAnchorMetaName } from './common'
 
 export function useRtl (
@@ -14,6 +15,7 @@ export function useRtl (
 ): Ref<RtlItem | undefined> | undefined {
   if (!rtlStateRef) return undefined
   const ssrAdapter = useSsrAdapter()
+  const NConfigProvider = inject(configProviderInjectionKey, null)
   const componentRtlStateRef = computed(() => {
     const { value: rtlState } = rtlStateRef
     if (!rtlState) {
@@ -42,7 +44,8 @@ export function useRtl (
         props: {
           bPrefix: clsPrefix ? `.${clsPrefix}-` : undefined
         },
-        ssr: ssrAdapter
+        ssr: ssrAdapter,
+        parent: NConfigProvider?.styleRoot
       })
     })
   }
