@@ -1,10 +1,10 @@
-const path = require('path')
+const path = require('node:path')
 const merge = require('deepmerge')
 const { defineConfig } = require('rollup')
 const nodeResolve = require('@rollup/plugin-node-resolve').default
 const babel = require('@rollup/plugin-babel').default
-const replace = require('@rollup/plugin-replace')
 const commonjs = require('@rollup/plugin-commonjs')
+const replace = require('@rollup/plugin-replace')
 const esbuild = require('rollup-plugin-esbuild').default
 const terser = require('@rollup/plugin-terser')
 
@@ -18,7 +18,10 @@ const baseConfig = defineConfig({
     esbuild({
       tsconfig: path.resolve(__dirname, 'tsconfig.esbuild.json'),
       target: 'esnext',
-      sourceMap: true
+      sourceMap: true,
+      jsx: 'transform',
+      jsxFactory: 'h',
+      jsxFragment: 'Fragment'
     }),
     babel({
       extensions,
