@@ -6,6 +6,7 @@
 
 ```demo
 basic.vue
+panel.vue
 alpha.vue
 size.vue
 disabled.vue
