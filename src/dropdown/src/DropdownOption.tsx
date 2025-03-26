@@ -315,7 +315,8 @@ export default defineComponent({
               data-dropdown-option
               class={[
                 `${clsPrefix}-dropdown-option-body__suffix`,
-                siblingHasSubmenu
+                this.hasSubmenu
+                && siblingHasSubmenu
                 && `${clsPrefix}-dropdown-option-body__suffix--has-submenu`
               ]}
             >
