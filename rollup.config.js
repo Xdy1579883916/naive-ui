@@ -12,7 +12,7 @@ const extensions = ['.mjs', '.js', '.json', '.ts']
 
 const baseConfig = defineConfig({
   input: path.resolve('./src/index.ts'),
-  external: ['vue'],
+  external: ['vue', 'lodash', 'lodash-es'],
   plugins: [
     nodeResolve({ extensions }),
     esbuild({
@@ -37,7 +37,9 @@ const umdConfig = defineConfig({
     format: 'umd',
     exports: 'named',
     globals: {
-      vue: 'Vue'
+      vue: 'Vue',
+      lodash: '_',
+      'lodash-es': '_'
     }
   }
 })
