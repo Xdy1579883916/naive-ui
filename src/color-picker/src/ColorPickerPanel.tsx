@@ -107,6 +107,7 @@ export type ColorPickerPanelProps = ExtractPublicPropTypes<
 
 export interface ColorPickerPanelSlots {
   swatchTop?: () => VNode[]
+  preview?: () => VNode[]
   action?: () => VNode[]
 }
 
@@ -537,7 +538,11 @@ export default defineComponent({
                   />
                 ) : null}
               </div>
-              {props.showPreview ? (
+              {slots.preview ? (
+                <div class={`${mergedClsPrefix}-color-picker-preview`}>
+                  {{ default: slots.preview }}
+                </div>
+              ) : props.showPreview ? (
                 <ColorPreview
                   clsPrefix={mergedClsPrefix}
                   mode={displayedModeRef.value}
@@ -559,12 +564,7 @@ export default defineComponent({
               onUpdateValue={handleInputUpdateValue}
             />
             {slots.swatchTop ? (
-              <div
-                class={`${mergedClsPrefix}-color-picker-swatch-top`}
-                style={{
-                  marginTop: '10px'
-                }}
-              >
+              <div class={`${mergedClsPrefix}-color-picker-swatch-top`}>
                 {{ default: slots.swatchTop }}
               </div>
             ) : null}

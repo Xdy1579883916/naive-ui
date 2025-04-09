@@ -48,6 +48,17 @@ const options = [
         'rgba(208, 48, 80, 1)',
       ]"
     >
+      <template #preview>
+        <div
+          :style="{
+            background: color,
+            width: '30px',
+            height: '30px',
+            borderRadius: '50%',
+            marginLeft: '10px',
+          }"
+        />
+      </template>
       <template #swatchTop>
         <NDropdown :options="options">
           <NButton size="tiny">
