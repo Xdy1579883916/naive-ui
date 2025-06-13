@@ -153,8 +153,6 @@ declare module 'vue' {
     NUploadTrigger: (typeof import('naive-ui'))['NUploadTrigger']
     NVirtualList: (typeof import('naive-ui'))['NVirtualList']
     NWatermark: (typeof import('naive-ui'))['NWatermark']
-    NHighlight: (typeof import('naive-ui'))['NHighlight']
-    NMarquee: (typeof import('naive-ui'))['NMarquee']
     NColorPickerPanel: (typeof import('naive-ui'))['NColorPickerPanel']
   }
 }

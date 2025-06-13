@@ -299,6 +299,7 @@ export const uploadProps = {
     default: 'file'
   },
   accept: String,
+  dndDragUncheck: Boolean,
   action: String,
   customRequest: Function as PropType<CustomRequest>,
   directory: Boolean,
@@ -506,13 +507,13 @@ export default defineComponent({
     ): void {
       if (!fileAndEntries || fileAndEntries.length === 0)
         return
-      const { onBeforeUpload } = props
+      const { onBeforeUpload, dndDragUncheck } = props
       fileAndEntries = mergedMultipleRef.value
         ? fileAndEntries
         : [fileAndEntries[0]]
       const { max, accept } = props
       fileAndEntries = fileAndEntries.filter(({ file, source }) => {
-        if (source === 'dnd' && accept?.trim()) {
+        if (source === 'dnd' && accept?.trim() && !dndDragUncheck) {
           return matchType(file.name, file.type, accept)
         }
         else {
