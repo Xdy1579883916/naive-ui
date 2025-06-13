@@ -29,7 +29,7 @@ debug.vue
 | --- | --- | --- | --- | --- |
 | abstract | `boolean` | `false` | 是否不存在 DOM 包裹，不支持 `image-card` 类型的 Upload |  |
 | accept | `string` | `undefined` | 接受的文件类型，参考 <n-a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#accept" target="_blank">accept</n-a> |  |
-| dndDragUncheck | `boolean` | `undefined` | 控制拖拽上传时过滤 `accept` 限制的文件类型，默认是过滤的， 可设置 `true` 忽略过滤 |  |
+| dnd-drag-uncheck | `boolean` | `undefined` | 控制拖拽上传时过滤 `accept` 限制的文件类型，默认是过滤的， 可设置 `true` 忽略过滤 |  |
 | action | `string` | `undefined` | 请求提交的地址 |  |
 | create-thumbnail-url | `(file: File \| null, fileInfo: UploadSettledFileInfo) => (Promise<string> \| string \| undefined)` | `undefined` | 自定义文件缩略图，如果返回了 `undefined`，会使用默认的缩略图展示逻辑 | `fileInfo` 2.34.0 |
 | custom-request | `(options: UploadCustomRequestOptions) => void` | `undefined` | 自定义上传方法，类型参考 <n-a href="#UploadCustomRequestOptions-Type">UploadCustomRequestOptions</n-a> |  |
