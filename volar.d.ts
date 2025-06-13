@@ -79,6 +79,7 @@ declare module 'vue' {
     NInputGroup: (typeof import('naive-ui'))['NInputGroup']
     NInputGroupLabel: (typeof import('naive-ui'))['NInputGroupLabel']
     NInputNumber: (typeof import('naive-ui'))['NInputNumber']
+    NInputOtp: (typeof import('naive-ui'))['NInputOtp']
     NLayout: (typeof import('naive-ui'))['NLayout']
     NLayoutContent: (typeof import('naive-ui'))['NLayoutContent']
     NLayoutFooter: (typeof import('naive-ui'))['NLayoutFooter']
@@ -152,6 +153,8 @@ declare module 'vue' {
     NUploadTrigger: (typeof import('naive-ui'))['NUploadTrigger']
     NVirtualList: (typeof import('naive-ui'))['NVirtualList']
     NWatermark: (typeof import('naive-ui'))['NWatermark']
+    NHighlight: (typeof import('naive-ui'))['NHighlight']
+    NMarquee: (typeof import('naive-ui'))['NMarquee']
     NColorPickerPanel: (typeof import('naive-ui'))['NColorPickerPanel']
   }
 }

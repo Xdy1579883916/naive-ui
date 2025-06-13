@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2.41.1
+
+### Fixes
+
+- 修复 `n-tabs` TabPane tab slots 的类型异常
+- 修复 `n-data-table` 可排序表格背景颜色变量丢失，关闭 [#6521](https://github.com/tusen-ai/naive-ui/issues/6521)
+
+### Features
+
+- 🌟 新增 `n-input-otp` 组件，关闭 [#1385](https://github.com/tusen-ai/naive-ui/issues/1385)、[#5681](https://github.com/tusen-ai/naive-ui/issues/5681)、[#6222](https://github.com/tusen-ai/naive-ui/issues/6222)
+- `n-upload` 新增 `custom-download` 属性，关闭 [#5946](https://github.com/tusen-ai/naive-ui/issues/5946)、[#6800](https://github.com/tusen-ai/naive-ui/issues/6800)
+- `n-upload` 新增 `uploadDownload` 工具方法
+- `n-tree-select` 新增 `indent` 属性
+
 ## 2.41.0
 
 `2025-01-05`
