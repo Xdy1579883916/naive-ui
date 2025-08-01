@@ -26,6 +26,7 @@ declare module 'vue' {
     NCollapseItem: (typeof import('naive-ui'))['NCollapseItem']
     NCollapseTransition: (typeof import('naive-ui'))['NCollapseTransition']
     NColorPicker: (typeof import('naive-ui'))['NColorPicker']
+    NColorPickerPanel: (typeof import('naive-ui'))['NColorPickerPanel']
     NConfigProvider: (typeof import('naive-ui'))['NConfigProvider']
     NCountdown: (typeof import('naive-ui'))['NCountdown']
     NDataTable: (typeof import('naive-ui'))['NDataTable']
@@ -60,7 +61,6 @@ declare module 'vue' {
     NGi: (typeof import('naive-ui'))['NGi']
     NGrid: (typeof import('naive-ui'))['NGrid']
     NGridItem: (typeof import('naive-ui'))['NGridItem']
-    NColorIndicator: (typeof import('naive-ui'))['NColorIndicator']
     NHeatmap: (typeof import('naive-ui'))['NHeatmap']
     NHighlight: (typeof import('naive-ui'))['NHighlight']
     NIcon: (typeof import('naive-ui'))['NIcon']
@@ -156,7 +156,6 @@ declare module 'vue' {
     NUploadTrigger: (typeof import('naive-ui'))['NUploadTrigger']
     NVirtualList: (typeof import('naive-ui'))['NVirtualList']
     NWatermark: (typeof import('naive-ui'))['NWatermark']
-    NColorPickerPanel: (typeof import('naive-ui'))['NColorPickerPanel']
   }
 }
 export {}
