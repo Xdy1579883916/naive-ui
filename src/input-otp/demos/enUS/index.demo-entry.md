@@ -11,6 +11,7 @@ basic.vue
 status.vue
 mask.vue
 template.vue
+block.vue
 size.vue
 form.vue
 pattern.vue
@@ -23,6 +24,7 @@ pattern.vue
 | Name | Type | Type Alais | Default | Description | Version |
 | --- | --- | --- | --- | --- | --- |
 | allow-input | `(char: string, index: number, currentValue: string[]) => boolean` | `InputOtpAllowInput` | `undefined` | Check the incoming value, if it returns `false`, input will not be accepted. | 2.41.1 |
+| block | `boolean` |  | `false` | Whether to fit its width to its parent's width. | 2.42.0 |
 | default-value | `string[]` |  | `[]` | Default value. | 2.41.1 |
 | disabled | `boolean` |  | `false` | Whether the component is disabled. | 2.41.1 |
 | gap | `string \| number` |  | `undefined` | Gap between different input. If not specified, the default styling would be applied. | 2.41.1 |
@@ -43,3 +45,9 @@ pattern.vue
 | Name | Parameters | Type Alias | Description | Version |
 | --- | --- | --- | --- | --- |
 | default | `(props: InputProps & { index: number, ref: (inst: InputInst) => void })` | `InputOtpDefaultSlot` | Input area. | 2.41.1 |
+
+### InputOTP Methods
+
+| 名称 | 类型 | 说明 | 版本 |
+| --- | --- | --- | --- |
+| focusOnChar | `(charIndex: number) => void` | Focus on a certain input box. | NEXT_VERSION |
